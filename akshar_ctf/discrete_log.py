@@ -42,7 +42,21 @@ def discrete_log(c, cd, n):
 
 
 
-
+def crt(mods, n):
+    ns = list(reversed(list(mods.keys())))
+    xs = [mods[n] for n in ns]
+    new_d = xs.pop(0)
+    prod = ns.pop(0)
+    for xi, ni in zip(xs, ns):
+        while new_d % ni != xi:
+            new_d += prod
+        prod *= ni
+        if prod > n:
+            break
+    else:
+        print("OOPS")
+        print(prod > n, math.log10(n), math.log10(prod))
+    return new_d, prod
 
 if __name__ == "__main__":
     c = 30
@@ -50,7 +64,15 @@ if __name__ == "__main__":
     n = 35
     p = 911
     cd = pow(c, d, p)
-    print(discrete_log(c%p, cd, p))
+    
+    # print(discrete_log(c%p, cd, p))
+
+    d = 3419
+    mods = {}
+    for m in range(19, 100, 7):
+        mods[m] = d % m
+    print(crt(mods, 100000))
+    
 
 
 
