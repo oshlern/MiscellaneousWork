@@ -1,0 +1,10 @@
+[challenge]
+name = "Rogue Lottery"
+authors = ["countableclouds"]
+tags = ["cryptography"]
+expected-difficulty = 8
+
+description = """
+Hello, agent. We've learned that our enemy's secrets are now a prize in the lottery! Not only that, but we were able to intercept their private key. Can you help us make history?"""
+
+hints = ["The flag isn't padded."]

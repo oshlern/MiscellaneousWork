@@ -1,0 +1,12 @@
+[challenge]
+name = "1.5 Bytes of RSA"
+authors = ["countableclouds"]
+tags = ["cryptography"]
+expected-difficulty = 5
+
+description = """
+This challenge should be super easy 😃. All you need to do is input `n`, and you get the flag!"""
+
+hints = [
+  "I guess the discrete log problem is easier with small moduli..."
+]

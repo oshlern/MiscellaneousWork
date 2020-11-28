@@ -1,0 +1,11 @@
+[challenge]
+name = "MatrixRSA"
+authors = ["countableclouds"]
+tags = ["cryptography"]
+expected-difficulty = 7
+
+description = """
+I just learned that a scalar is kind of just a 1x1 matrix! With this in mind, I'm going to be trying at 2x2 matrix encryption. And come on—why wouldn't I use an extra prime if it's possible?! I encrypted a matrix and sent it to you, along with the decryption key, to test it out! I put the primes in the matrix so you can get the full private key, and I sent two transmissions with different nonces for testings sake. This should be pretty simple, eh?"""
+
+hints = [
+]
